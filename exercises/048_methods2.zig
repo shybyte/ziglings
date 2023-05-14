@@ -54,13 +54,13 @@ fn visitElephants(first_elephant: *Elephant) void {
 
         // This gets the next elephant or stops:
         // which method do we want here?
-        e = if (e.hasTail()) e.??? else break;
+        e = if (e.hasTail()) e.getTail() else break;
     }
 }
 
 // Zig's enums can also have methods! This comment originally asked
 // if anyone could find instances of enum methods in the wild. The
-// first five pull requests were accepted and here they are:
+// first five pull requests were accepted and here they are: 
 //
 // 1) drforester - I found one in the Zig source:
 // https://github.com/ziglang/zig/blob/041212a41cfaf029dc3eb9740467b721c76f406c/src/Compilation.zig#L2495
