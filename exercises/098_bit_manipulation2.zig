@@ -35,6 +35,8 @@ pub fn main() !void {
     print("Is this a pangram? {?}!\n", .{isPangram("The quick brown fox jumps over the lazy dog.")});
 }
 
+const all_26_bits_set = std.math.pow(u32, 2, 26) - 1;
+
 fn isPangram(str: []const u8) bool {
     // first we check if the string has at least 26 characters
     if (str.len < 26) return false;
@@ -60,5 +62,5 @@ fn isPangram(str: []const u8) bool {
     // and if so, we know the given string is a pangram
     //
     // but what do we have to compare?
-    return bits == 0x..???;
+    return bits == all_26_bits_set;
 }
